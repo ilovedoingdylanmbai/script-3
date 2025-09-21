@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GhostLine Scripts</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      color: #00ff88;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+    }
+
+    .ghost {
+      font-size: 5rem;
+      opacity: 0.7;
+      position: absolute;
+      animation: floatIn 2s ease-out forwards, slap 0.3s 2s ease forwards, fadeOut 1s 2.3s forwards;
+    }
+
+    @keyframes floatIn {
+      from { transform: translateY(-200%); opacity: 0; }
+      to { transform: translateY(0); opacity: 0.7; }
+    }
+
+    @keyframes slap {
+      0% { transform: scale(1) rotate(0); }
+      50% { transform: scale(1.2) rotate(10deg); }
+      100% { transform: scale(1) rotate(0); }
+    }
+
+    @keyframes fadeOut {
+      from { opacity: 0.7; }
+      to { opacity: 0; }
+    }
+
+    .content {
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s 3.5s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff44;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #66ffcc;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background: #00ff88;
+      color: black;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff44;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background: #00ffaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="ghost">👻</div>
+
+  <div class="content">
+    <h1>GhostLine Scripts</h1>
+    <div class="tagline">Free Tween Script</div>
+    <a href="https://www.roblox.com/share?code=fa8215be2da9df4c95aef0f181c54be7&type=Server" class="btn">Get Key</a>
+  </div>
+</body>
+</html>
